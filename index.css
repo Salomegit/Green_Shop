@@ -1,0 +1,16 @@
+.custome-card-img {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.custom-land-page-bg {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 0, 0.6),
+        rgba(25, 69, 19, 0.6)
+      ), url("maize3.jpg");
+      background-repeat: no-repeat;
+      position: center;
+      background-size: cover;
+}
