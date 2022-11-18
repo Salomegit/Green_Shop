@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+   />
+   <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+   />
+    <title>Visit Us</title>
+  </head>
+
+  <body>
+    <style>
+      .header {
+        margin: 0%;
+        font-family: sans-serif;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .contact_box {
+        border: 2px solid #21242b;
+        box-sizing: border-box;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        height: 600px;
+        max-width: 600px;
+        margin-left: 300px;
+      }
+      .radio{
+        display:flex;
+        justify-items: end;
+        align-items: center;
+        margin-left: 150px;
+
+      }
+     .select{
+        margin-left: 150px;
+        margin-bottom: 40px;
+        padding: 12px;
+        margin: auto;
+        margin: 10px;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        border: 1px solid;
+        ;
+        
+
+     }
+     .gender{
+        padding: 0%;
+        margin: 0%;
+     }
+     
+
+      .input {
+        width: 80%;
+        margin: auto;
+      }
+
+      input[type="text"],
+      label {
+        font-size: large;
+        font-family: sans-serif;
+        text-align: center;
+        margin-left: 100px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 70%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        margin-left: 100px;
+      }
+
+      input[type="submit"] {
+        background-color: #c5bfd7;
+        color: #21242b;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        margin-bottom: 10%;
+        align-items: right;
+        margin-left: 200px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      form {
+        padding: 20px;
+      }
+    </style>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="display: flex;" > 
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+    
+        >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav" style="width: 100%;">
+            <a class="navbar-brand" style="color: rgb(1, 22, 1)" href="#">Green Shop</a>
+    
+            <a style="color: white;" class="nav-item nav-link" id="home" href="/">Home</a>
+    
+            <a
+            style="color: white;"
+            class="nav-item nav-link"
+            id="signUp"
+            href="about.html"
+            >About Us</a>
+            
+            <a
+            style="color: white;"
+            class="nav-item nav-link"
+            id="login"
+            href="visit.html"
+            >Visit Us</a
+            >
+            
+            <a
+            style="color: white;"
+            class="nav-item nav-link"
+            id="logout"
+            href="dev_info.html"
+            >Developer</a>
+            
+            <form class="form-inline my-2 my-lg-0 rightNav" style="flex-grow: 1; justify-content: end;">
+                <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 bg-info" style="color: white;" type="submit">Search</button>
+            </form>
+            </div>
+        
+          </div>
+        </div>
+      </nav>
+    <header class="header">
+      <h1>VISITOR ENQUIRY FORM</h1>
+    </header>
+
+    <br />
+    <main>
+      <div class="contact_box">
+        <form>
+          <div class="form_input">
+            <label for="name">Full Name:</label>
+            
+            <input
+              type="text"
+              id="name"
+              name="firstname"
+              placeholder="your full name"
+            />
+            <br />
+          </div>
+          
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              id="email"
+              name="Email"
+              placeholder="youremail@gmail.com"
+            />
+
+            <br />
+            <div class="radio" >
+                <label class="gender" for="radio">Gender:</label>
+                
+                <input type="radio" name="gender" value="male"> Male<br>
+                
+                <input type="radio" name="gender" value="female"> Female<br>
+            </div>
+          <div >
+            <h5 style="  font-size: large;
+            font-family: sans-serif; font-weight: lighter; margin-left: 100px;
+            ">
+            Location:</h5>
+            <select class="select" name="location" id="location">
+                
+                <div class="items">
+                <option value="location">---Select Your Location---</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Pune">Pune</option>
+            </div>
+            </select>
+
+            <br>
+         
+          </div>
+          <div>
+            <label for="contact">Please Write Your Enquiry :</label>
+            <textarea id="contact" name="contact" placeholder="Type your enquiries here..."></textarea>
+            <br />
+          </div>
+          </div class = "button">
+          <input type="submit" value="Send" />
+          <input type="submit" value="Cancel" />
+        </form>
+      </div>
+    </main>
+    <br />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
