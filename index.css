@@ -7,10 +7,13 @@
 .custom-land-page-bg {
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 0, 0.6),
-      rgba(25, 69, 19, 0.6)
+      rgba(245, 245, 237, 0.7),
+      rgba(245, 245, 237, 0.7),
+      rgba(245, 245, 237, 0.7),
+      rgba(245, 245, 237, 0.7),
+      rgba(46, 117, 36, 0.7)
     ),
-    url('maize3.jpg');
+    url('https://www.world-grain.com/ext/resources/Article-Images/2019/06-June/Corn-flour_AdobeStock_94855632_E.jpg?t=1559745821&width=1080');
   background-repeat: no-repeat;
   position: center;
   background-size: cover;

@@ -23,6 +23,8 @@
     
     <style>
 
+
+
 .about-section {
   padding: 50px;
   text-align: center;
@@ -47,6 +49,7 @@
 }
 .content {
  margin: 30px 20px;
+ width: 500px;
 }
 
 .heading {
@@ -57,6 +60,30 @@
 .details {
  padding: 2px;
  text-align: justify;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 245, 237, 0.9),
+    rgba(245, 245, 237, 0.9),
+    rgba(245, 245, 237, 0.9),
+    rgba(245, 245, 237, 0.9),
+    rgba(25, 69, 19, 0.9)
+    ),
+    url('https://www.world-grain.com/ext/resources/Article-Images/2019/06-June/Corn-flour_AdobeStock_94855632_E.jpg?t=1559745821&width=1080');
+  background-repeat: no-repeat;
+  position: center;
+  background-size: cover;
+}
+body {
+  background-repeat: no-repeat;
+  position: center;
+  background-size: cover;
+  height: 96vh;
 }
 </style>
 
@@ -71,7 +98,7 @@
     >
     <span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse" id="navbar">
+<div class="collapse navbar-collapse" id="navbar" style="padding: 5px 30px">
     <div class="navbar-nav" style="width: 100%;">
         <a class="navbar-brand" style="color: rgb(1, 22, 1)" href="#">Green Shop</a>
 
@@ -109,18 +136,20 @@
     </div>
   </nav>
   <!-- nav ends -->
+  <main>
+
     <div class="content">
-        <h3 class="heading">Mission</h3>
-        <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorem molestias saepe incidunt qui tenetur iusto quia commodi, beatae sequi iure libero, ullam, tempore reprehenderit dicta blanditiis eaque minus accusamus laboriosam distinctio. Ducimus sunt nam voluptate dolores. In perspiciatis enim doloremque rerum ea laborum temporibus voluptas, aliquam sunt placeat necessitatibus?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum delectus labore deleniti odit magni nobis, praesentium sit similique molestias corrupti, iusto animi sapiente eius mollitia dolorem distinctio facere ipsam possimus architecto, voluptatum esse hic magnam blanditiis natus? Ad placeat molestiae aspernatur facere veritatis ullam cum dignissimos suscipit excepturi vitae asperiores mollitia necessitatibus, magni iusto architecto odio voluptatem voluptates, quod itaque maxime. Laudantium iusto repellat quo facilis veniam repudiandae deleniti magnam quia laborum? Laudantium sint facere, rerum libero ducimus officiis quos sit odit, dolore aspernatur ut, atque est aperiam! Provident, nobis! Sed doloribus animi veritatis tempora nobis consequatur commodi accusamus accusantium!
+      <h3 class="heading">Mission</h3>
+      <p class="details">Our goal is to make sure that our customers receive the quality services that we have built our name on. We offer an extensive inventory to fit your needs, and we take pride in keeping our vehicles in pristine condition. You do not have to take our word for it; we let our sales and services speak for themselves.
         </p>
     </div>
     <div class="content">
         <h3 class="heading">Vision</h3>
-        <p class="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque eius obcaecati aliquam unde suscipit vel et similique doloribus consequatur, cumque quaerat non voluptate rerum saepe officiis quasi dolor? Tempore sapiente molestias iure, id enim iusto neque tempora minus in itaque distinctio libero, a quo. Optio asperiores excepturi praesentium sed voluptas?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sit, officia id a nisi culpa ipsa fugit laboriosam tempora pariatur rem ex tempore, soluta ratione eum dicta nam, quo facilis minima cum corporis repellendus voluptatum! Fuga eos veritatis rem illo earum eius distinctio eligendi laboriosam tempora. Rem distinctio quidem quod odio molestias aspernatur facere officiis est quas obcaecati eaque harum iusto, debitis at cupiditate beatae tenetur explicabo dicta. Dolorem quasi aliquid quaerat quia beatae? Pariatur nemo, rem necessitatibus nulla accusamus quaerat error aliquam culpa libero sapiente voluptatum illum cupiditate tenetur facilis, eligendi, suscipit numquam blanditiis architecto ullam nesciunt perferendis perspiciatis!
+        <p class="details">
+          To increase our turnover with a relevant strategic customer base that offers us great growth potential, with a special focus on nutrition and a firm commitment to innovation, specialisation in cereals , a balance between wholesale and B2B customers.
         </p>
     </div>
+  </main>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
