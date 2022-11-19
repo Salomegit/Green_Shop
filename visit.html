@@ -79,6 +79,18 @@
       main {
         margin: auto;
       }
+      .result-item {
+        display: flex;
+        margin: 0px 20px;
+      }
+      .title {
+        font-weight: bolder;
+      }
+
+      .result {
+        max-width: 50%;
+      }
+
     </style>
      <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="display: flex;" > 
         <button
@@ -131,28 +143,29 @@
     <br />
     <main class="main">
       <div class="contact_box">
-        
-        <form class="form">
+        <form class="form" method="GET" action="">
           <h3 style="width: 100%; text-align: center">VISITOR ENQUIRY FORM</h3>
           <div class="form_input">
-            <label for="name">Full Name:</label>
+            <label for="name">Full Name*:</label>
             
             <input
               type="text"
               id="name"
-              name="firstname"
+              name="firstName"
               placeholder="your full name"
+              required
             />
             <br />
           </div>
           <div class="form_input">
 
-              <label for="email">Email:</label>
+              <label for="email">Email*:</label>
               <input
               type="email"
               id="email"
-              name="Email"
-              placeholder="youremail@gmail.com"
+              name="email"
+              placeholder="youremail@abc.xyz"
+              required
               />
             </div>
             <div class="radio form_input" >
@@ -176,17 +189,77 @@
         </select>
         </div>
         <div class="form_input" style="display: flex; align-items: center;">
-            <label for="contact">Please Write Your Enquiry :</label>
-            <textarea rows="5" id="contact" name="contact" placeholder="Type your enquiries here..."></textarea>
+            <label for="enquiry">Please Write Your Enquiry :</label>
+            <textarea rows="5" id="enquiry" name="enquiry" placeholder="Type your enquiries here..."></textarea>
         </div>
         <div class="form_action">
-            <button class="btn-submit" type="submit">Submit</button>
+            <button class="btn-submit" type="submit" onclick="onSubmit(event, this.form)">Submit</button>
             <button class="btn-cancel">Cancel</button>
         </div>
         </form>
       </div>
+      <div class="result" hidden="true" id="result-view">
+            <h3 style="margin: 0px 20px; font-weight: bolder">Congradulations...!!</h3>
+            <div class="result-item">
+                <h5 class="title">Your Name:</h5>
+                <p class="content" id="result-name" style="color: black;">ss</p>
+            </div>
+            <div class="result-item">
+                <h5 class="title">Your Email:</h5>
+                <p class="content" id="result-email"></p>
+            </div>
+            <div class="result-item">
+                <h5 class="title">You are from: </h5>
+                <p class="content" id="result-location"></p>
+            </div>
+            <div class="result-item">
+                <h5 class="title">Your detail enquiry:</h5>
+                <p class="content" id="result-enquiry"></p>
+            </div>
+            
+        </div>
     </main>
     <br />
+    <!-- custom scripts -->
+    <script>
+        function onSubmit(event, form) {
+            event.preventDefault();
+            var name = form.firstName.value;
+            var email = form.email.value;
+            var gender = form.gender.value;
+            var location = form.location.value;
+            var enquiry = form.enquiry.value;
+            // console.log("Your name is " + name + "\n" + email + "\n" + gender + "\n" + location + "\n" + enquiry);
+            // alert("Your name is " + name + "\n" + email + "\n" + gender + "\n" + location + "\n" + enquiry );
+
+            var errors = ""
+            var count = 0;
+
+            if (name == "") {
+                count += 1;
+                errors += count + ". Please enter your full name. It is a required field\n";
+            }
+
+            if (email == "") {
+                count += 1;
+                errors += count + ". Please enter your full name. It is a required field\n";
+            }
+
+            if (errors != "") {
+                alert(errors);
+            } else {
+                document.getElementById("result-name").innerHTML = name;
+                document.getElementById("result-email").innerHTML = email;
+                document.getElementById("result-location").innerHTML = location;
+                document.getElementById("result-enquiry").innerHTML = enquiry;
+                document.getElementById("result-view").hidden = false;
+            }
+            
+            
+        }
+        
+    </script>
+    <!-- bootstrap scripts -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
