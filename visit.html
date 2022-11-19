@@ -13,6 +13,7 @@
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     crossorigin="anonymous"
    />
+   <link rel="stylesheet" href="main.css">
     <title>Visit Us</title>
   </head>
 
@@ -32,81 +33,51 @@
         display: flex;
         align-self: center;
         justify-content: center;
-        height: 600px;
         max-width: 600px;
-        margin-left: 300px;
       }
       .radio{
         display:flex;
         justify-items: end;
         align-items: center;
-        margin-left: 150px;
 
       }
-     .select{
-        margin-left: 150px;
-        margin-bottom: 40px;
-        padding: 12px;
-        margin: auto;
-        margin: 10px;
-        width: 70%;
-        display: flex;
-        align-items: center;
-        box-sizing: border-box;
-        justify-content: center;
-        border: 1px solid;
-        ;
-        
-
-     }
-     .gender{
-        padding: 0%;
-        margin: 0%;
-     }
-     
-
+      
       .input {
         width: 80%;
         margin: auto;
       }
 
-      input[type="text"],
-      label {
-        font-size: large;
-        font-family: sans-serif;
-        text-align: center;
-        margin-left: 100px;
-      }
-
-      input[type="text"],
-      textarea {
-        width: 70%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        margin-left: 100px;
-      }
-
-      input[type="submit"] {
-        background-color: #c5bfd7;
-        color: #21242b;
-        padding: 12px 20px;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        margin-bottom: 10%;
-        align-items: right;
-        margin-left: 200px;
-      }
-
-      input[type="submit"]:hover {
-        background-color: #45a049;
-      }
-
       form {
         padding: 20px;
+      }
+      .form_input {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        margin: 20px 0px;
+      }
+      label {
+        min-width: 200px;
+        text-align: left;
+      }
+      .form_action {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .gender-option {
+        margin: 0px 5px;
+      }
+      .btn-submit {
+        margin: 5px;
+      }
+      .form {
+        margin: auto;
+        padding: 40px;
+      }
+      main {
+        margin: auto;
       }
     </style>
      <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="display: flex;" > 
@@ -123,7 +94,7 @@
         <div class="navbar-nav" style="width: 100%;">
             <a class="navbar-brand" style="color: rgb(1, 22, 1)" href="#">Green Shop</a>
     
-            <a style="color: white;" class="nav-item nav-link" id="home" href="/">Home</a>
+            <a style="color: white;" class="nav-item nav-link" id="home" href="index.html">Home</a>
     
             <a
             style="color: white;"
@@ -156,14 +127,13 @@
           </div>
         </div>
       </nav>
-    <header class="header">
-      <h1>VISITOR ENQUIRY FORM</h1>
-    </header>
 
     <br />
-    <main>
+    <main class="main">
       <div class="contact_box">
-        <form>
+        
+        <form class="form">
+          <h3 style="width: 100%; text-align: center">VISITOR ENQUIRY FORM</h3>
           <div class="form_input">
             <label for="name">Full Name:</label>
             
@@ -175,50 +145,44 @@
             />
             <br />
           </div>
-          
-            <label for="email">Email:</label>
-            <input
-              type="text"
+          <div class="form_input">
+
+              <label for="email">Email:</label>
+              <input
+              type="email"
               id="email"
               name="Email"
               placeholder="youremail@gmail.com"
-            />
-
-            <br />
-            <div class="radio" >
+              />
+            </div>
+            <div class="radio form_input" >
                 <label class="gender" for="radio">Gender:</label>
                 
-                <input type="radio" name="gender" value="male"> Male<br>
+                <input class="gender-option" type="radio" name="gender" value="male"> Male<br>
                 
-                <input type="radio" name="gender" value="female"> Female<br>
+                <input class="gender-option" type="radio" name="gender" value="female"> Female<br>
             </div>
-          <div >
-            <h5 style="  font-size: large;
-            font-family: sans-serif; font-weight: lighter; margin-left: 100px;
-            ">
-            Location:</h5>
+          <div class="form_input">
+
+              <label for="location">Location:</label>
             <select class="select" name="location" id="location">
-                
                 <div class="items">
-                <option value="location">---Select Your Location---</option>
+                    <option value="location">---Select Your Location---</option>
                 <option value="Mumbai">Mumbai</option>
                 <option value="Jaipur">Jaipur</option>
                 <option value="Kolkata">Kolkata</option>
                 <option value="Pune">Pune</option>
             </div>
-            </select>
-
-            <br>
-         
-          </div>
-          <div>
+        </select>
+        </div>
+        <div class="form_input" style="display: flex; align-items: center;">
             <label for="contact">Please Write Your Enquiry :</label>
-            <textarea id="contact" name="contact" placeholder="Type your enquiries here..."></textarea>
-            <br />
-          </div>
-          </div class = "button">
-          <input type="submit" value="Send" />
-          <input type="submit" value="Cancel" />
+            <textarea rows="5" id="contact" name="contact" placeholder="Type your enquiries here..."></textarea>
+        </div>
+        <div class="form_action">
+            <button class="btn-submit" type="submit">Submit</button>
+            <button class="btn-cancel">Cancel</button>
+        </div>
         </form>
       </div>
     </main>
